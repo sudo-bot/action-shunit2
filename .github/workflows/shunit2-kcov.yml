@@ -9,4 +9,4 @@ jobs:
             - name: get tools versions
               uses: sudo-bot/action-shunit2@latest
               with:
-                  cli-args: "kcov --version && shunit2 --version"
+                  cli-args: "docker/tests/versions.sh"
