@@ -11,6 +11,6 @@ branding:
     color: purple
 runs:
     using: "docker"
-    image: "docker://botsudo/action-shunit2:dev"
+    image: "docker://botsudo/action-shunit2:latest"
     args:
         - ${{ inputs.cli-args }}
