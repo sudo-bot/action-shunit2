@@ -1,0 +1,9 @@
+version: "3.3"
+
+services:
+    sut:
+        build: .
+        command: "/tests/versions.sh"
+        volumes:
+          - ./tests:/tests:ro
+        working_dir: /tests

@@ -1,0 +1,16 @@
+name: "shunit2"
+author: williamdes
+description: "Run your shunit2 tests and get coverage with kcov"
+inputs:
+    cli:
+        description: "The command line"
+        required: true
+
+branding:
+    icon: "code"
+    color: purple
+runs:
+    using: "docker"
+    image: "docker://botsudo/action-shunit2:dev"
+    args:
+        - ${{ inputs.cli-args }}

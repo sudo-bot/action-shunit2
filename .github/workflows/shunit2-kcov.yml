@@ -1,0 +1,12 @@
+name: test all binaries
+on: [push]
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: get tools versions
+              uses: sudo-bot/action-shunit2@latest
+              with:
+                  cli-args: "kcov --version && shunit2 --version"
