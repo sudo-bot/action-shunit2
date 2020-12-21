@@ -26,7 +26,7 @@ jobs:
             - name: run my tests
               uses: sudo-bot/action-shunit2@latest
               with:
-                  cli-args: "./tests/run.sh"
+                  cli: "./tests/run.sh"
 ```
 
 ## Example usage with a script and kcov
@@ -43,5 +43,5 @@ jobs:
             - name: run my tests
               uses: sudo-bot/action-shunit2@latest
               with:
-                  cli-args: "kcov ./build/coverage ./tests/test.sh"
+                  cli: "kcov ./build/coverage ./tests/test.sh"
 ```
