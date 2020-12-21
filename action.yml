@@ -13,4 +13,4 @@ runs:
     using: "docker"
     image: "docker://botsudo/action-shunit2:latest"
     args:
-        - ${{ inputs.cli-args }}
+        - ${{ inputs.cli }}
