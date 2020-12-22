@@ -8,7 +8,7 @@ ARG BUILD_DATE
 
 COPY entrypoint.sh /entrypoint.sh
 
-RUN apk add --no-cache --update shunit2
+RUN apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/edge/main --update shunit2
 
 # Metadata
 LABEL org.label-schema.vendor="Sudo-Bot" \
