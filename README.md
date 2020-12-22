@@ -9,8 +9,8 @@ You can find the image on [Docker Hub](https://hub.docker.com/r/botsudo/action-s
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/botsudo/action-shunit2.svg)](https://hub.docker.com/r/botsudo/action-shunit2)
 
-The shunit2 [https://github.com/kward/shunit2#readme](website)
-The Kcov [https://github.com/SimonKagstrom/kcov#readme](website)
+The shunit2 [website](https://github.com/kward/shunit2#readme)
+The Kcov [website](https://github.com/SimonKagstrom/kcov#readme)
 
 ## Example usage
 
