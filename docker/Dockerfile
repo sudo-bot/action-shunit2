@@ -1,6 +1,6 @@
 FROM shellspec/kcov
 
-ARG RELEASE_VERSION=latest
+ARG RELEASE_VERSION=2.1.8
 
 # Metadata params
 ARG VCS_REF
@@ -8,7 +8,7 @@ ARG BUILD_DATE
 
 COPY entrypoint.sh /entrypoint.sh
 
-RUN apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/edge/main --update shunit2
+RUN apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community shunit2=${RELEASE_VERSION}-r0
 
 # Metadata
 LABEL org.label-schema.vendor="Sudo-Bot" \
