@@ -2,8 +2,8 @@
 
 A GitHub action for shunit2 and kcov
 
-![Build docker image](https://github.com/sudo-bot/action-shunit2/workflows/Build%20docker%20image/badge.svg?branch=main)
-![test all binaries](https://github.com/sudo-bot/action-shunit2/workflows/test%20all%20binaries/badge.svg?branch=main)
+[![Build docker image](https://github.com/sudo-bot/action-shunit2/actions/workflows/build.yml/badge.svg)](https://github.com/sudo-bot/action-shunit2/actions/workflows/build.yml)
+[![test all binaries](https://github.com/sudo-bot/action-shunit2/actions/workflows/shunit2-kcov.yml/badge.svg)](https://github.com/sudo-bot/action-shunit2/actions/workflows/shunit2-kcov.yml)
 
 You can find the image on [Docker Hub](https://hub.docker.com/r/botsudo/action-shunit2)
 
