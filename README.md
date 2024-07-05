@@ -22,7 +22,7 @@ jobs:
     tests:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v4
             - name: run my tests
               uses: sudo-bot/action-shunit2@latest
               with:
@@ -39,7 +39,7 @@ jobs:
     tests:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v4
             - name: run my tests
               uses: sudo-bot/action-shunit2@latest
               with:
