@@ -1,4 +1,8 @@
 name: test all binaries
+
+permissions:
+  contents: read
+
 on: [push]
 
 jobs:
