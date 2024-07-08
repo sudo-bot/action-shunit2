@@ -14,8 +14,6 @@ PLATFORM ?= linux/amd64
 ACTION ?= load
 PROGRESS_MODE ?= plain
 
-.PHONY: update-tags update-branches push-branches docker-build docker-push
-
 docker-build:
 	# https://github.com/docker/buildx#building
 	docker buildx build \
