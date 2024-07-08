@@ -16,5 +16,5 @@ jobs:
               run: make docker-build
               env:
                 PLATFORM: linux/amd64
-                ACTION: push
-                PROGRESS_MODE: load
+                ACTION: load
+                PROGRESS_MODE: plain
