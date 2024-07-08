@@ -1,4 +1,5 @@
-FROM shellspec/kcov
+# TODO: set a fixed version, when v43 is released
+FROM kcov/kcov
 
 ARG RELEASE_VERSION=2.1.8
 
@@ -8,7 +9,7 @@ ARG BUILD_DATE
 
 COPY entrypoint.sh /entrypoint.sh
 
-RUN apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/3.20/community shunit2=${RELEASE_VERSION}-r1
+RUN apk add --no-cache shunit2=${RELEASE_VERSION}-r1
 
 # Metadata
 LABEL org.label-schema.vendor="Sudo-Bot" \
