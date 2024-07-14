@@ -1,5 +1,5 @@
 # TODO: set a fixed version, when v43 is released
-FROM kcov/kcov
+FROM kcov/kcov:latest-alpine
 
 ARG RELEASE_VERSION=2.1.8
 
