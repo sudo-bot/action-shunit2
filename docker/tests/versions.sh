@@ -4,7 +4,5 @@ set -eux
 
 echo "Running in: $PWD"
 
-ls -lahR
-
-SHUNIT_COLOR="none" ./test.sh | grep -F "Ran 1 test"
-kcov --dump-summary ./coverage ./test.sh
+SHUNIT_COLOR="none" ./docker/tests/test.sh | grep -F "Ran 1 test"
+kcov --dump-summary ./coverage ./docker/tests/test.sh
