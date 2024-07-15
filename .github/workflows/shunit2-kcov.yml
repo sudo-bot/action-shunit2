@@ -18,7 +18,9 @@ jobs:
             - name: Run tests
               uses: sudo-bot/action-shunit2@latest
               with:
-                  cli: "SHUNIT_COLOR=\"none\" ./docker/tests/test.sh | grep -F \"Ran 1 test\""
+                  cli: "./docker/tests/test.sh | grep -F \"Ran 1 test\""
+              env:
+                SHUNIT_COLOR: "none"
             - name: Run tests with coverage
               uses: sudo-bot/action-shunit2@latest
               with:
