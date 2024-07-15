@@ -18,7 +18,7 @@ jobs:
             - name: Run tests (check mode)
               uses: sudo-bot/action-shunit2@latest
               with:
-                  cli: "./docker/tests/check.sh"
+                  cli: "kcov --dump-summary ./coverage ./docker/tests/check.sh"
             - name: Run tests directly
               uses: sudo-bot/action-shunit2@latest
               with:
