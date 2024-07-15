@@ -4,6 +4,9 @@
 # @author William Desportes <williamdes@wdes.fr>
 ##
 
-set -e
+set -eu
+
+# Files are rw-rw-rw- by default and folders rwxrwxrwx
+umask 000
 
 $@
