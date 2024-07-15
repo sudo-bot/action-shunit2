@@ -1,12 +1,13 @@
-name: test all binaries
+name: Test the action
 
 permissions:
   contents: read
 
-on: [push]
+on: [push, workflow_dispatch]
 
 jobs:
     test:
+        name: Test the action
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
@@ -14,3 +15,8 @@ jobs:
               uses: sudo-bot/action-shunit2@latest
               with:
                   cli: "docker/tests/versions.sh"
+            - name: Upload coverage reports to Codecov
+              uses: codecov/codecov-action@v4
+              with:
+                token: ${{ secrets.CODECOV_TOKEN }}
+                file: /tmp/kcov/test.sh/cobertura.xml
