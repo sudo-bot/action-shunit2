@@ -18,7 +18,11 @@ jobs:
             - name: Run tests
               uses: sudo-bot/action-shunit2@latest
               with:
-                  cli: "docker/tests/versions.sh"
+                  cli: "SHUNIT_COLOR=\"none\" ./docker/tests/test.sh | grep -F \"Ran 1 test\""
+            - name: Run tests with coverage
+              uses: sudo-bot/action-shunit2@latest
+              with:
+                  cli: "kcov --dump-summary ./coverage ./docker/tests/test.sh"
             - name: Find files
               run: find ./coverage -type f \( -name '*.json' -o -name '*.xml' \) -print
             - name: Upload coverage reports to Codecov
