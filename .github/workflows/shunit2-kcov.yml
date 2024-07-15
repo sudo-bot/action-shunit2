@@ -23,8 +23,6 @@ jobs:
               uses: sudo-bot/action-shunit2@latest
               with:
                   cli: "./docker/tests/test.sh"
-              env:
-                SHUNIT_COLOR: "none"
             - name: Run tests with kcov coverage
               uses: sudo-bot/action-shunit2@latest
               with:
