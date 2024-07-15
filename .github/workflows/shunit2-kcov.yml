@@ -15,13 +15,17 @@ jobs:
               uses: sudo-bot/action-shunit2@latest
               with:
                   cli: "kcov --version"
-            - name: Run tests
+            - name: Run tests (check mode)
               uses: sudo-bot/action-shunit2@latest
               with:
-                  cli: "./docker/tests/test.sh | grep -F \"Ran 1 test\""
+                  cli: "./docker/tests/check.sh"
+            - name: Run tests directly
+              uses: sudo-bot/action-shunit2@latest
+              with:
+                  cli: "./docker/tests/test.sh"
               env:
                 SHUNIT_COLOR: "none"
-            - name: Run tests with coverage
+            - name: Run tests with kcov coverage
               uses: sudo-bot/action-shunit2@latest
               with:
                   cli: "kcov --dump-summary ./coverage ./docker/tests/test.sh"
