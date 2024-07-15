@@ -16,6 +16,10 @@ The Kcov [website](https://github.com/SimonKagstrom/kcov#readme)
 
 ```yml
 name: run tests
+
+permissions:
+  contents: read
+
 on: [push]
 
 jobs:
@@ -33,6 +37,10 @@ jobs:
 
 ```yml
 name: run tests
+
+permissions:
+  contents: read
+
 on: [push]
 
 jobs:
