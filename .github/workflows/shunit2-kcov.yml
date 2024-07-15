@@ -11,10 +11,14 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
-            - name: get tools versions
+            - name: get kcov version
               uses: sudo-bot/action-shunit2@latest
               with:
-                  cli: "docker/tests/versions.sh"
+                  cli: "kcov --version"
+            - name: Run tests
+              uses: sudo-bot/action-shunit2@latest
+              with:
+                  cli: "docker/tests/versions.sh ${{ github.workspace }}"
             - name: Find files
               run: find ./coverage -type f \( -name '*.json' -o -name '*.xml' \) -print
             - name: Upload coverage reports to Codecov

@@ -1,9 +1,8 @@
 #!/bin/sh
 
-set -eu
+set -eux
 
-cd $(dirname $0)/
+cd "$1"
 
-kcov --version
 SHUNIT_COLOR="none" ./test.sh | grep -F "Ran 1 test"
 kcov --dump-summary ./coverage ./test.sh
