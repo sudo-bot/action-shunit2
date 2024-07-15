@@ -11,8 +11,6 @@ COPY entrypoint.sh /entrypoint.sh
 
 RUN apk add --no-cache shunit2=${RELEASE_VERSION}-r1
 
-USER nobody
-
 # Metadata
 LABEL org.label-schema.vendor="Sudo-Bot" \
     org.label-schema.url="https://github.com/sudo-bot/action-shunit2#readme" \
