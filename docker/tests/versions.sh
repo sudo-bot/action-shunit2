@@ -4,5 +4,7 @@ set -eux
 
 echo "Running in: $PWD"
 
+ls -lahR
+
 SHUNIT_COLOR="none" ./test.sh | grep -F "Ran 1 test"
 kcov --dump-summary ./coverage ./test.sh
